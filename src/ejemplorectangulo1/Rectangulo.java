@@ -29,9 +29,21 @@ public class Rectangulo {
         System.out.println("La base es "+base+" y la altura "+altura);
     }
     
-    public float area(){
+    public float area(){//devuelve el valor del area pero no lo guarda en ninguna variable local
         System.out.println("El area es "+base*altura);
-        return base*altura;
+        return base*altura;    
+    }
+    // tb lo podemos declarar asi:
+    // public float area(){
+    //float area=base*altura;
+    //System.out.print("El area es "+ area);
+    //}
+    public float perimetro(){//guarda el perimetro en una variable local p, lo muestra y lo devuelve
+        float p=base*2+altura*2;
+        System.out.println("El perimetro es "+(p));
+        return p;
+        //tb puedo poner el return asi:
+        //return (base*2+altura*2);
     }
     //metodos de acceso
     //set/get de la base

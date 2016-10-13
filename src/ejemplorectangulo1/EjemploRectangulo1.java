@@ -5,6 +5,8 @@
  */
 package ejemplorectangulo1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author otorradomiguez
@@ -33,6 +35,19 @@ public class EjemploRectangulo1 {
         rec2.set_altura(6.9f);//asignamos nuevo valor a la altura
         rec2.ver();
         rec2.area();
+        System.out.println(rec2.toString());//toString es un metodo de la superclase object
+        float res =rec2.perimetro();//guardamos el return de perimetro en la variable res, se imprime pq el system.out ya esta en el metodo
+        System.out.print(res+"\n");//print sin salto de linea que imprime el valor de res y luego hace el salto de lines con el \n
+        
+        Rectangulo rec3= new Rectangulo(20,10);
+        System.out.println(rec3.perimetro());//hace la llamada a perimetro y luego imprime el return de perimetro, por eso lo pone 2 veces
+        
+        Rectangulo rec4= new Rectangulo(Float.parseFloat(JOptionPane.showInputDialog("Introduce la base")),Float.parseFloat(JOptionPane.showInputDialog("Introduce la altura")));
+        //System.out.println("Este rectangulo de base "+rec4.get_base()+" y altura "+rec4.get_altura()+"\n"+rec4.area()+"\n"+rec4.perimetro()); //primero imprime las System.out de area() y perimetro() y despues esta linea con los returns de dichos metodos
+        //Si el metodo no tiene un return no deja meterlo en el print
+        System.out.println("En este rectangulo de base "+rec4.get_base()+" y altura "+rec4.get_altura());
+        rec4.area();
+        rec4.perimetro();
     }
     
 }
